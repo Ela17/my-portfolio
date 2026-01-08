@@ -133,7 +133,7 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
     about: {
       p1: "I am a fullstack developer with a preference for backend systems. My journey started in Olbia, Sardinia, and brought me to Turin where I graduated in Computer Science from the University of Turin with a mark of 107/110.",
       p2: "During my internship at Engineering D. Hub, I had the opportunity to work on a monitoring platform for containerized systems, where I learned the importance of well-designed architecture and maintainable code.",
-      p3: "When I'm not coding, I enjoy dedicated time to small creative projects: I find it relaxing to see something take shape one stitch at a time. For the rest of my time, I play in a mixed volleyball team and compete in a league: I love the competitive spirit and teamwork.",
+      p3: "When I'm not coding, I enjoy dedicating time to small creative projects: I find relaxing to see something take shape little by little. In my remaining free time, I play in a mixed volleyball team and partecipate in a league: I love the competitive spirit and teamwork.",
     },
     skills: {
       title: "Skills",
