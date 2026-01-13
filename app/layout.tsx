@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elena Derosas | Backend Developer",
-  description: "Portfolio di Elena Derosas - Sviluppatrice Backend a Torino",
+  title: "Elena Derosas | Developer",
+  description: "Portfolio di Elena Derosas - Sviluppatrice a Torino",
 };
 
 export default function RootLayout({

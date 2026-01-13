@@ -62,7 +62,7 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
       projects: "Progetti",
     },
     hero: {
-      role: "Software Engineer",
+      role: "Developer",
       tagline:
         "Neolaureata in Informatica. Appassionata di architetture software e tecnologie moderne.",
     },
