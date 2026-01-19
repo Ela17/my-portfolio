@@ -50,6 +50,7 @@ export default function Home() {
   const navItems = [
     { id: "about", label: t.nav.about },
     { id: "skills", label: t.nav.skills },
+    { id: "soft-skills", label: t.nav.softSkills },
     { id: "experience", label: t.nav.experience },
     { id: "projects", label: t.nav.projects },
   ];
@@ -215,6 +216,35 @@ export default function Home() {
                   >
                     {skill}
                   </span>
+                ))}
+              </div>
+            </section>
+
+            {/* SOFT SKILLS */}
+            <section
+              id="soft-skills"
+              className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
+              aria-label={t.nav.softSkills}
+            >
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+                  {t.nav.softSkills}
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                {t.softSkills.items.map((item, index) => (
+                  <div
+                    key={index}
+                    className="group relative card-hover rounded-lg p-4"
+                  >
+                    <h3 className="font-medium text-slate-200 group-hover:text-teal-300 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-slate-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 ))}
               </div>
             </section>

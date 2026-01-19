@@ -2,6 +2,7 @@ interface TranslationStrings {
   nav: {
     about: string;
     skills: string;
+    softSkills: string;
     experience: string;
     projects: string;
   };
@@ -16,6 +17,13 @@ interface TranslationStrings {
   };
   skills: {
     title: string;
+  };
+  softSkills: {
+    title: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
   };
   experience: {
     title: string;
@@ -58,6 +66,7 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
     nav: {
       about: "Chi sono",
       skills: "Competenze",
+      softSkills: "Soft Skills",
       experience: "Esperienza",
       projects: "Progetti",
     },
@@ -73,6 +82,31 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
     },
     skills: {
       title: "Competenze",
+    },
+    softSkills: {
+      title: "Soft Skills",
+      items: [
+        {
+          title: "Problem Solving Sistematico",
+          description: "Approccio metodico al debugging e alla risoluzione di problemi tecnici complessi",
+        },
+        {
+          title: "Gestione delle Priorità",
+          description: "Capacità di bilanciare ambizione progettuale e fattibilità, allocando risorse per rispettare le scadenze",
+        },
+        {
+          title: "Pensiero Critico e Progettuale",
+          description: "Definizione di requisiti strutturati e trasformazione di necessità funzionali in documentazione tecnica",
+        },
+        {
+          title: "Orientamento ai Risultati",
+          description: "Sviluppo iterativo-incrementale mirato a massimizzare efficienza e ridurre costi di refactoring",
+        },
+        {
+          title: "Adattabilità",
+          description: "Integrazione rapida in metodologie aziendali e acquisizione di nuovi strumenti in tempi brevi",
+        },
+      ],
     },
     experience: {
       title: "Esperienza",
@@ -122,6 +156,7 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
     nav: {
       about: "About",
       skills: "Skills",
+      softSkills: "Soft Skills",
       experience: "Experience",
       projects: "Projects",
     },
@@ -137,6 +172,31 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
     },
     skills: {
       title: "Skills",
+    },
+    softSkills: {
+      title: "Soft Skills",
+      items: [
+        {
+          title: "Systematic Problem Solving",
+          description: "Methodical approach to debugging and solving complex technical problems",
+        },
+        {
+          title: "Priority Management",
+          description: "Ability to balance project ambition with feasibility, allocating resources to meet deadlines",
+        },
+        {
+          title: "Critical & Design Thinking",
+          description: "Defining structured requirements and transforming functional needs into technical documentation",
+        },
+        {
+          title: "Results-Oriented",
+          description: "Iterative-incremental development focused on maximizing efficiency and reducing refactoring costs",
+        },
+        {
+          title: "Adaptability",
+          description: "Quick integration into company methodologies and rapid acquisition of new tools",
+        },
+      ],
     },
     experience: {
       title: "Experience",
