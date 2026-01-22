@@ -53,6 +53,11 @@ interface TranslationStrings {
       description: string;
       label: string;
     };
+    cinema: {
+      title: string;
+      description: string;
+      label: string;
+    };
     more: string;
   };
   footer: {
@@ -145,6 +150,12 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
           "Sito completo per la mia squadra di pallavolo amatoriale. Include area admin con autenticazione, gestione eventi e articoli, calendario partite con classifica live, upload immagini su cloud. Progetto personale sviluppato per esercizio.",
         label: "Progetto Personale",
       },
+      cinema: {
+        title: "Sistema di Gestione Film",
+        description:
+          "Applicazione web con architettura a microservizi per l'esplorazione di un database cinematografico. Include gateway Express con UI Handlebars, API Spring Boot su PostgreSQL, server MongoDB per dati dinamici, chat real-time con Socket.IO e documentazione Swagger.",
+        label: "Progetto Universitario",
+      },
       more: "Altri progetti su GitHub",
     },
     footer: {
@@ -234,6 +245,12 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
         description:
           "Complete website for my amateur volleyball team. Features admin area with authentication, event and article management, match calendar with live standings, cloud image uploads. Personal project built for practice.",
         label: "Personal Project",
+      },
+      cinema: {
+        title: "Film Management System",
+        description:
+          "Web application with microservices architecture for exploring a movie database. Features Express gateway with Handlebars UI, Spring Boot API on PostgreSQL, MongoDB server for dynamic data, real-time chat with Socket.IO, and Swagger documentation.",
+        label: "University Project",
       },
       more: "More projects on GitHub",
     },

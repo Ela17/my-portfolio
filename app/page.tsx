@@ -20,7 +20,7 @@ export default function Home() {
           }
         });
       },
-      { rootMargin: "-50% 0px -50% 0px" }
+      { rootMargin: "-50% 0px -50% 0px" },
     );
 
     const sections = document.querySelectorAll("section[id]");
@@ -38,10 +38,12 @@ export default function Home() {
     "Docker",
     "PostgreSQL",
     "MySQL",
+    "MongoDB",
     "REST API",
     "Svelte",
     "Next.js",
     "React",
+    "Spring Boot",
     "Git",
     "Linux",
     "System Design",
@@ -290,7 +292,7 @@ export default function Home() {
                             <span className="text-teal-300 mt-1.5">▹</span>
                             {achievement}
                           </li>
-                        )
+                        ),
                       )}
                     </ul>
                     <div className="mt-4 flex flex-wrap gap-2">
@@ -365,11 +367,51 @@ export default function Home() {
                           >
                             {tech}
                           </span>
-                        )
+                        ),
                       )}
                     </div>
                   </div>
                 </div>
+
+                {/* Cinema Project */}
+                <a
+                  href="https://github.com/Ela17/IUM-TWEB-progetto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 card-hover rounded-lg p-6 block"
+                >
+                  <div className="z-10 sm:col-span-2">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-teal-300">
+                      {t.projects.cinema.label}
+                    </span>
+                  </div>
+                  <div className="z-10 sm:col-span-6">
+                    <h3 className="font-medium leading-snug text-slate-200 group-hover:text-teal-300 transition-colors inline-flex items-center gap-2">
+                      {t.projects.cinema.title}
+                      <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </h3>
+                    <p className="mt-2 text-sm leading-normal text-slate-400">
+                      {t.projects.cinema.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {[
+                        "Node.js",
+                        "Express",
+                        "Spring Boot",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Socket.IO",
+                      ].map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 text-xs font-medium text-teal-300 bg-teal-400/10 rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
 
                 {/* Volley Website Project */}
                 <a
