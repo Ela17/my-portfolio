@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Mail, ExternalLink } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -12,21 +13,26 @@ export default function Home() {
 
   // Active section detection
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-50% 0px -50% 0px" },
-    );
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section[id]");
+      const scrollPosition = window.scrollY + 150;
 
-    const sections = document.querySelectorAll("section[id]");
-    sections.forEach((section) => observer.observe(section));
+      let currentSection = "about";
 
-    return () => observer.disconnect();
+      sections.forEach((section) => {
+        const sectionTop = (section as HTMLElement).offsetTop;
+        if (sectionTop <= scrollPosition) {
+          currentSection = section.id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const skills = [
@@ -59,9 +65,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Spotlight */}
-      <div className="spotlight" />
-
       {/* Language Toggle - Fixed top right */}
       <div className="fixed top-6 right-6 z-50">
         <LanguageToggle />
@@ -75,10 +78,13 @@ export default function Home() {
               {/* Photo + Name inline on desktop */}
               <div className="flex items-center gap-6 mb-6">
                 <div className="relative w-24 aspect-[2/3] rounded-xl overflow-hidden border-2 border-slate-700/50 shadow-xl shadow-teal-500/10 flex-shrink-0">
-                  <img
+                  <Image
                     src="/profile.webp"
                     alt="Elena Derosas"
-                    className="w-full h-full object-cover"
+                    fill
+                    priority
+                    unoptimized
+                    className="object-cover"
                   />
                 </div>
                 <div>
@@ -184,7 +190,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
               aria-label={t.nav.about}
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0a1628] px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   {t.nav.about}
                 </h2>
@@ -204,7 +210,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
               aria-label={t.nav.skills}
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0a1628] px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   {t.nav.skills}
                 </h2>
@@ -228,7 +234,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
               aria-label={t.nav.softSkills}
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0a1628] px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   {t.nav.softSkills}
                 </h2>
@@ -257,7 +263,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
               aria-label={t.nav.experience}
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0a1628] px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   {t.nav.experience}
                 </h2>
@@ -337,7 +343,7 @@ export default function Home() {
               className="mb-16 scroll-mt-16 lg:mb-24 lg:scroll-mt-24"
               aria-label={t.nav.projects}
             >
-              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+              <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0a1628] px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
                   {t.nav.projects}
                 </h2>
