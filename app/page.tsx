@@ -37,19 +37,21 @@ export default function Home() {
 
   const skills = [
     "Java",
+    "Spring Boot",
     "Python",
     "TypeScript",
     "JavaScript",
     "C",
     "Docker",
+    "Kubernetes",
     "PostgreSQL",
     "MySQL",
     "MongoDB",
     "REST API",
+    "Angular",
     "Svelte",
     "Next.js",
     "React",
-    "Spring Boot",
     "Git",
     "Linux",
     "System Design",
@@ -270,6 +272,51 @@ export default function Home() {
               </div>
 
               <div className="space-y-12">
+                {/* Deloitte */}
+                <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 card-hover rounded-lg p-6">
+                  <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-teal-300 sm:col-span-2">
+                    {t.experience.currentRole.date}
+                  </header>
+                  <div className="z-10 sm:col-span-6">
+                    <h3 className="font-medium leading-snug text-slate-200">
+                      <span className="group-hover:text-teal-300 transition-colors">
+                        {t.experience.currentRole.role}
+                      </span>
+                      <span className="text-slate-500"> · </span>
+                      <span className="text-slate-400">
+                        {t.experience.currentRole.company}
+                      </span>
+                    </h3>
+                    <p className="mt-2 text-sm leading-normal text-slate-400">
+                      {t.experience.currentRole.description}
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      {t.experience.currentRole.achievements.map(
+                        (achievement, i) => (
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-sm text-slate-400"
+                          >
+                            <span className="text-teal-300 mt-1.5">▹</span>
+                            {achievement}
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {["Java", "Spring Boot", "Angular", "Agile", "Docker", "Kubernetes"].map(
+                        (tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 text-xs font-medium text-teal-300 bg-teal-400/10 rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ),
+                      )}
+                    </div>
+                  </div>
+                </div>
                 {/* Internship */}
                 <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 card-hover rounded-lg p-6">
                   <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">

@@ -27,6 +27,13 @@ interface TranslationStrings {
   };
   experience: {
     title: string;
+    currentRole: {
+      date: string;
+      role: string;
+      company: string;
+      description: string;
+      achievements: string[];
+    };
     internship: {
       date: string;
       role: string;
@@ -78,11 +85,11 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
     hero: {
       role: "Developer",
       tagline:
-        "Neolaureata in Informatica. Appassionata di architetture software e tecnologie moderne.",
+        "Analyst presso Deloitte. Laureata in Informatica. Appassionata di architetture software e tecnologie moderne.",
     },
     about: {
       p1: "Sono una sviluppatrice fullstack con una predilezione per i sistemi backend. Il mio percorso è iniziato a Olbia, in Sardegna, e mi ha portato a Torino dove ho conseguito la laurea in Informatica presso l'Università di Torino con votazione 107/110.",
-      p2: "Durante il mio tirocinio presso Engineering D. Hub, ho avuto l'opportunità di lavorare su una piattaforma di monitoraggio per sistemi containerizzati, dove ho imparato l'importanza di un'architettura ben progettata e di un codice manutenibile.",
+      p2: "Oggi porto questa passione in Deloitte Consulting, dove mi occupo di progettare e sviluppare soluzioni software per il settore banking. Questa esperienza segue un importante percorso di tirocinio presso Engineering D. Hub, dove ho lavorato su una piattaforma di monitoraggio containerizzata, consolidando l'importanza di architetture scalabili e codice manutenibile.",
       p3: "Quando non sto programmando, mi piace dedicarmi a piccoli lavori creativi: mi rilassa vedere qualcosa che prende forma un punto alla volta. Per il resto del tempo, gioco in una squadra di pallavolo mista con cui partecipo a un campionato: amo l'agonismo e lo spirito di squadra.",
     },
     skills: {
@@ -93,28 +100,46 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
       items: [
         {
           title: "Problem Solving Sistematico",
-          description: "Approccio metodico al debugging e alla risoluzione di problemi tecnici complessi",
+          description:
+            "Approccio metodico al debugging e alla risoluzione di problemi tecnici complessi",
         },
         {
           title: "Gestione delle Priorità",
-          description: "Capacità di bilanciare ambizione progettuale e fattibilità, allocando risorse per rispettare le scadenze",
+          description:
+            "Capacità di bilanciare ambizione progettuale e fattibilità, allocando risorse per rispettare le scadenze",
         },
         {
           title: "Pensiero Critico e Progettuale",
-          description: "Definizione di requisiti strutturati e trasformazione di necessità funzionali in documentazione tecnica",
+          description:
+            "Definizione di requisiti strutturati e trasformazione di necessità funzionali in documentazione tecnica",
         },
         {
           title: "Orientamento ai Risultati",
-          description: "Sviluppo iterativo-incrementale mirato a massimizzare efficienza e ridurre costi di refactoring",
+          description:
+            "Sviluppo iterativo-incrementale mirato a massimizzare efficienza e ridurre costi di refactoring",
         },
         {
           title: "Adattabilità",
-          description: "Integrazione rapida in metodologie aziendali e acquisizione di nuovi strumenti in tempi brevi",
+          description:
+            "Integrazione rapida in metodologie aziendali e acquisizione di nuovi strumenti in tempi brevi",
         },
       ],
     },
     experience: {
       title: "Esperienza",
+      currentRole: {
+        date: "Marzo 2026 — Presente",
+        role: "Analyst",
+        company: "Deloitte Consulting",
+        description:
+          "Consulente attualmente impegnata nella progettazione e nello sviluppo di soluzioni software per il settore bancario.",
+        achievements: [
+          "Sviluppo Fullstack con Java Spring Boot (backend) e Angular (frontend)",
+          "Progettazione di soluzioni per sistemi finanziari",
+          "Collaborazione in team Agile per l'analisi dei requisiti di business",
+          "Approfondimento di metodologie di sviluppo enterprise e Clean Code",
+        ],
+      },
       internship: {
         date: "Apr — Giu 2025",
         role: "Tirocinante Software Engineer",
@@ -174,11 +199,11 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
     hero: {
       role: "Software Engineer",
       tagline:
-        "Computer Science graduate. Passionate about software architecture and modern technologies.",
+        "Analyst at Deloitte. Computer Science graduate. Passionate about software architecture and modern technologies.",
     },
     about: {
       p1: "I am a fullstack developer with a preference for backend systems. My journey started in Olbia, Sardinia, and brought me to Turin where I graduated in Computer Science from the University of Turin with a mark of 107/110.",
-      p2: "During my internship at Engineering D. Hub, I had the opportunity to work on a monitoring platform for containerized systems, where I learned the importance of well-designed architecture and maintainable code.",
+      p2: "Nowadays, I bring this passion to Deloitte Consulting, where I design and develop software solutions for the banking sector. This follows a significant internship at Engineering D. Hub, where I worked on a container monitoring platform, strengthening my focus on scalable architectures and maintainable code.",
       p3: "When I'm not coding, I enjoy dedicating time to small creative projects: I find relaxing to see something take shape little by little. In my remaining free time, I play in a mixed volleyball team and partecipate in a league: I love the competitive spirit and teamwork.",
     },
     skills: {
@@ -189,28 +214,46 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
       items: [
         {
           title: "Systematic Problem Solving",
-          description: "Methodical approach to debugging and solving complex technical problems",
+          description:
+            "Methodical approach to debugging and solving complex technical problems",
         },
         {
           title: "Priority Management",
-          description: "Ability to balance project ambition with feasibility, allocating resources to meet deadlines",
+          description:
+            "Ability to balance project ambition with feasibility, allocating resources to meet deadlines",
         },
         {
           title: "Critical & Design Thinking",
-          description: "Defining structured requirements and transforming functional needs into technical documentation",
+          description:
+            "Defining structured requirements and transforming functional needs into technical documentation",
         },
         {
           title: "Results-Oriented",
-          description: "Iterative-incremental development focused on maximizing efficiency and reducing refactoring costs",
+          description:
+            "Iterative-incremental development focused on maximizing efficiency and reducing refactoring costs",
         },
         {
           title: "Adaptability",
-          description: "Quick integration into company methodologies and rapid acquisition of new tools",
+          description:
+            "Quick integration into company methodologies and rapid acquisition of new tools",
         },
       ],
     },
     experience: {
       title: "Experience",
+      currentRole: {
+        date: "March 2026 — Present",
+        role: "Analyst",
+        company: "Deloitte Consulting",
+        description:
+          "Consultant currently involved in the design and development of software solutions for the banking sector.",
+        achievements: [
+          "Fullstack development with Java Spring Boot (backend) and Angular (frontend)",
+          "Designing solutions for financial systems",
+          "Collaborating in Agile teams for business requirements analysis",
+          "Deepening enterprise development methodologies and Clean Code",
+        ],
+      },
       internship: {
         date: "Apr — Jun 2025",
         role: "Software Engineer Intern",
