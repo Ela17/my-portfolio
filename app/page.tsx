@@ -401,7 +401,7 @@ export default function Home() {
               <div className="space-y-12">
                 {/* Thesis Project */}
                 <a
-                  href="https://github.com/Ela17/Tirocinio"
+                  href="https://github.com/Ela17/bachelor-thesis-project"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 card-hover rounded-lg p-6 block"
