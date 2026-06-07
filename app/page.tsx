@@ -43,16 +43,18 @@ export default function Home() {
     "JavaScript",
     "C",
     "Docker",
-    "Kubernetes",
+    "Azure DevOps",
     "PostgreSQL",
     "MySQL",
     "MongoDB",
     "REST API",
+    "Swagger UI",
     "Angular",
     "Svelte",
     "Next.js",
     "React",
     "Git",
+    "Yarn",
     "Linux",
     "System Design",
   ];
@@ -85,7 +87,7 @@ export default function Home() {
                     alt="Elena Derosas"
                     fill
                     priority
-                    unoptimized
+                    sizes="96px"
                     className="object-cover"
                   />
                 </div>
@@ -105,7 +107,7 @@ export default function Home() {
               </div>
 
               {/* Tagline */}
-              <p className="max-w-xs leading-normal text-slate-400">
+              <p className="max-w-xs whitespace-pre-line text-sm leading-normal text-slate-400">
                 {t.hero.tagline}
               </p>
 
@@ -304,7 +306,7 @@ export default function Home() {
                       )}
                     </ul>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      {["Java", "Spring Boot", "Angular", "Agile", "Docker", "Kubernetes"].map(
+                      {["Java", "Spring Boot", "Angular", "Agile", "Docker", "Azure DevOps"].map(
                         (tech) => (
                           <span
                             key={tech}
@@ -398,15 +400,21 @@ export default function Home() {
 
               <div className="space-y-12">
                 {/* Thesis Project */}
-                <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 card-hover rounded-lg p-6">
+                <a
+                  href="https://github.com/Ela17/Tirocinio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 card-hover rounded-lg p-6 block"
+                >
                   <div className="z-10 sm:col-span-2">
                     <span className="text-xs font-semibold uppercase tracking-wide text-teal-300">
                       {t.projects.thesis.label}
                     </span>
                   </div>
                   <div className="z-10 sm:col-span-6">
-                    <h3 className="font-medium leading-snug text-slate-200 group-hover:text-teal-300 transition-colors">
+                    <h3 className="font-medium leading-snug text-slate-200 group-hover:text-teal-300 transition-colors inline-flex items-center gap-2">
                       {t.projects.thesis.title}
+                      <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </h3>
                     <p className="mt-2 text-sm leading-normal text-slate-400">
                       {t.projects.thesis.description}
@@ -424,7 +432,7 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                </div>
+                </a>
 
                 {/* Cinema Project */}
                 <a
