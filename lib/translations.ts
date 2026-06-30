@@ -83,7 +83,7 @@ export const translations: Record<"it" | "en", TranslationStrings> = {
       projects: "Progetti",
     },
     hero: {
-      role: "Developer",
+      role: "Software Engineer",
       tagline:
         "Analyst presso Deloitte.\nAnalista Funzionale in Transformation Factory per uno dei principali gruppi bancari europei. Appassionata di architetture software e tecnologie moderne.",
     },
